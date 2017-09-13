@@ -1,0 +1,7 @@
+<a href='{% url 'tire-list' %}'>list</a>
+<a href='{% url 'tire-detail' object.id %}'>detail</a>
+<a href='{% url 'tire-delete' object.id %}'>del</a>
+<form action="" method="post" enctype="multipart/form-data">{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Update" />
+</form>

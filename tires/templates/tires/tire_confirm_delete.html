@@ -1,0 +1,6 @@
+<a href='{% url 'tire-list' %}'>list</a>
+<a href='{% url 'tire-detail' object.id %}'>detail</a>
+<form action="" method="post">
+    {% csrf_token %}
+    <button>del</button>
+</form>

@@ -1,0 +1,11 @@
+<h2>Tires</h2>
+	<a href='{% url 'tire-add' %}'>add tire</a>
+    <ul>
+        {% for tire in tire_list %}
+            <li>
+            	{{ tire.id }}
+            	<a href='{% url 'tire-detail' tire.id %}'>detail</a>
+            	<a href='{% url 'tire-delete' tire.id %}'>delete</a>
+            </li>
+        {% endfor %}
+    </ul>

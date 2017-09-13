@@ -1,0 +1,14 @@
+{% load static %}
+
+<h1>{{ object.id }}</h1>
+<a href='{% url 'tire-list' %}'>list</a>
+<a href='{% url 'tire-update' object.id %}'>edit</a>
+<a href='{% url 'tire-delete' object.id %}'>del</a>
+{% if object.picture %}
+	<img src="{{ object.picture.url }}">
+{% endif %}
+<p>width: {{ object.width }}</p>
+<p>height: {{ object.height }}</p>
+<p>diameter: {{ object.diameter }}</p>
+<p>speed_index: {{ object.speed_index }}</p>
+
